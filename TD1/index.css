@@ -1,0 +1,20 @@
+body {
+  padding-top: 30px;
+}
+
+.center {
+  margin: auto;
+  display: block;
+  width: 400px;
+}
+
+form {
+  text-align: right;
+  line-height: 30px;
+}
+
+#erreur {
+  font-size: 10pt;
+  color: red;
+  display: none;
+}

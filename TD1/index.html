@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script type="text/javascript" src="code.js"></script>
+
+	<title>Formulaire</title>
+</head>
+<body onload="init()">
+	<div class="center">
+		<form action="/my-handling-form-page" method="post" onsubmit="return isValidForm()" id="formulaire">
+	  <div>
+		  <label for="sexe">Sexe : </label>
+		  <input type="radio" id="h" name="genre" value="Homme">
+		  <label for="sexe">Homme</label>
+		  <input type="radio" id="f" name="genre" value="Femme">
+		  <label for="sexe">Femme</label>
+	  </div>
+	  <div>
+		<label for="nom">Nom :</label>
+		<input type="text" id="nom" name="nom" />
+	  </div>
+	  <div>
+	    <label for="prenom">Prenom :</label>
+	    <input type="text" id="prenom" name="prenom" />
+	  </div>
+	  <div>
+	    <label for="age">Age :</label>
+	    <input type="text" id="age" name="age" />
+	  </div>
+	  <div>
+	    <label for="pseudo">Pseudo :</label>
+	    <input type="text" id="pseudo" name="pseudo" />
+	  </div>
+	  <div>
+	    <label for="mdp">Mot de Passe :</label>
+	    <input type="password" id="mdp" name="mdp" />
+	  </div>
+	  <div>
+	    <label for="confirmation">Mot de Passe (confirmation) :</label>
+	    <input type="password" id="confirmation" name="confirmation" />
+	  </div>
+	  <div>
+		  <label for="pays">Pays :</label>
+		  <select name="Pays">
+			  <option value ="EN"> Angleterre </option>
+			  <option value ="D"> Allemagne </option>
+			  <option value ="FR"> France </option>
+		  </select>
+	  </div>
+	  <div>
+	  	<input type="checkbox" id="newsletter" name="newsletter" value="newsletter">
+	  	<label for="newsletter">Je désire recevoir la newsletter chaque mois. </label>
+	  </div>
+	  <div>
+	  	<input type="submit" value="M'inscrire"></input>
+	  	<input type="reset" value="Réinitialiser le formulaire" id="resetButton"></input>
+	  </div>
+		<div>
+			<p id="erreur">Veuillez renseigner tous les champs du formulaire avant de valider</p>
+		</div>
+	  </form>
+	</div>
+</body>
+</html>
