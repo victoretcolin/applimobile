@@ -60,21 +60,25 @@ function resetFormulaire() {
 	var inputs = document.getElementsByTagName("INPUT");
 	for(var i = 0; i < inputs.length; i++) {
 		if(inputs[i].type == "text" || inputs[i].type == "password")
-			inputs[i].style.borderColor="initial";
+			inputs[i].style.borderColor = "initial";
 	}
 }
 
 function isValidForm() {
+	// On récupère tous les éléments input du html
 	var fields = document.getElementsByTagName('INPUT');
 	for(var i = 0; i < fields.length; i++) {
 		if(fields[i].type == "text" || fields[i].type == "password") {
+			// Si la bordure est rouge, c'est que le champ n'est pas valide
 			if(fields[i].value == "" || fields[i].style.borderColor == "red") {
+				// On affiche l'erreur
 				document.getElementById('erreur').style.display = "block";
 				return false;
 			}
 		}
 	}
 
+	// Bouton Radio : Un des genres doit être sélectionné
 	if(document.getElementById('h').checked == false && document.getElementById('f').checked == false) {
 		document.getElementById('erreur').style.display = "block";
 		return false;
