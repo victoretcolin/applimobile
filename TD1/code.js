@@ -62,6 +62,7 @@ function resetFormulaire() {
 		if(inputs[i].type == "text" || inputs[i].type == "password")
 			inputs[i].style.borderColor = "initial";
 	}
+	document.getElementById('erreur').style.display = "none";
 }
 
 function isValidForm() {
