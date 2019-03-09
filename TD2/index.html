@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="todoApp">
+<head>
+	<title>ToDoList</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body ng-controller="TodoCtrl">
+	<form ng-submit="addTask()">
+		<span>Ajouter la task :</span>
+		<input type="text" name="champ" ng-model="task">
+		<input type="submit" value="Ajouter"></button>
+	</form>
+
+	<br/>
+	<br/>
+
+	<div ng-repeat="element in tab">
+		<input type="checkbox" name="check" ng-click="barrer($index)">
+		<span id="tache" ng-click="surligner($index)" ng-style="{ 'text-decoration' : (element.barre == true) ? 'line-through' : 'blink' , 'background-color' : (element.surligne == true) ? 'yellow' : 'transparent' }">{{ element.valeur }}</span>
+		<a href="" ng-click="supprimer($index)">X</a>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="js/todo.js"></script>
+</body>
+</html>
