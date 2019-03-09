@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="ListeaFaire">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Liste Choses à Faire</title>
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <script src="index.js"></script>
+  </head>
+
+  <body ng-controller="mainController">
+    <h1>La liste des choses à faire</h1>
+    <br/> Nombre de choses: {{ laliste.length }}
+    <div id="todo-list">
+      <div ng-repeat="x in laliste">
+        <h5><button ng-click="deleteTodo(x._id)"> x </button> {{ x.text }} </h5>
+      </div>
+    </div>
+
+    <div id="todo-form">
+      <form>
+        <input type="text" placeholder="écrire quelque chose" ng-model="formData.text">
+        <br/>
+        <button type="submit" ng-click="createTodo()">Ajouter</button>
+      </form>
+    </div>
+  </body>
+</html>
